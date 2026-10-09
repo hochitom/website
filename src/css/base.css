@@ -1,9 +1,15 @@
 @font-face {
   font-family: 'Archivo';
   font-weight: 100 900;
-  font-stretch: 62% 125%;
   font-display: swap;
-  src: url('/assets/fonts/archivo-latin-wdth-normal.woff2') format('woff2');
+  src: url('/assets/fonts/archivo-latin-wght-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-weight: 100 800;
+  font-display: swap;
+  src: url('/assets/fonts/jetbrains-mono-latin-wght-normal.woff2') format('woff2');
 }
 
 html { scroll-behavior: smooth; }
@@ -13,30 +19,32 @@ html { scroll-behavior: smooth; }
 }
 
 body {
-  background: var(--gletscher);
-  color: var(--fichte);
+  background: var(--bg);
+  color: var(--text);
   font: 400 var(--text-base) / 1.65 var(--font);
-  font-stretch: 100%;
 }
 
 h1, h2, h3, h4 {
-  font-weight: 800;
-  font-stretch: 118%;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  font-family: var(--font-code);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
   text-wrap: balance;
 }
 
 p { text-wrap: pretty; }
 
 a {
-  text-decoration-thickness: 0.09em;
+  color: var(--fn);
+  text-decoration-thickness: 0.08em;
   text-underline-offset: 0.22em;
 }
 
+a:hover { color: var(--kw); }
+
 :focus-visible {
-  outline: 3px solid var(--rot);
+  outline: 3px solid var(--const);
   outline-offset: 3px;
 }
 
-.dark :focus-visible { outline-color: var(--rot-hell); }
+::selection { background: color-mix(in oklch, var(--const) 35%, transparent); }

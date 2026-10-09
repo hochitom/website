@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Thomas Hochörtler – Solution Architect</title>
     <meta name="description" content="Thomas Hochörtler is a Solution Architect at LEAN-CODERS GmbH in Vienna, Austria.">
-    <link rel="preload" href="/assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
-    <header class="block block--dark dark hero">
+    <header class="hero">
       <div class="page">
         <div class="hero__grid">
           <div>
@@ -18,185 +19,141 @@
             <p class="hero__lead">I design software solutions in Vienna, from the first requirements workshop to a system that teams can build, run and change.</p>
             <p class="hero__links">
               <a class="button" href="#career">Read my career</a>
-              <a href="#contact">Get in touch</a>
+              <a class="link-code" href="#contact">Get in touch</a>
             </p>
           </div>
-          <svg class="diagram" viewBox="0 0 400 390" role="img" aria-label="Diagram: requirements flow into an architecture, which connects content, commerce and frontend systems.">
-            <g class="diagram__node" style="--d:0.2s">
-              <rect x="100" y="0" width="200" height="56" rx="6"/>
-              <text class="diagram__label" x="200" y="34" text-anchor="middle">Requirements</text>
-            </g>
-            <path class="diagram__line" pathLength="1" style="--d:0.6s" d="M200 56V140"/>
-            <g class="diagram__node diagram__node--core" style="--d:1s">
-              <rect x="70" y="140" width="260" height="76" rx="6"/>
-              <text class="diagram__label" x="200" y="185" text-anchor="middle">Architecture</text>
-            </g>
-            <path class="diagram__line" pathLength="1" style="--d:1.4s" d="M200 216V260M200 260H60V310"/>
-            <path class="diagram__line" pathLength="1" style="--d:1.5s" d="M200 260V310"/>
-            <path class="diagram__line" pathLength="1" style="--d:1.6s" d="M200 260H340V310"/>
-            <g class="diagram__node" style="--d:2.1s">
-              <rect x="0" y="310" width="120" height="76" rx="6"/>
-              <text class="diagram__label" x="60" y="341" text-anchor="middle">Content</text>
-              <text class="diagram__sub" x="60" y="364" text-anchor="middle">Strapi v5</text>
-            </g>
-            <g class="diagram__node" style="--d:2.2s">
-              <rect x="140" y="310" width="120" height="76" rx="6"/>
-              <text class="diagram__label" x="200" y="341" text-anchor="middle">Commerce</text>
-              <text class="diagram__sub" x="200" y="364" text-anchor="middle">Vendure v3</text>
-            </g>
-            <g class="diagram__node" style="--d:2.3s">
-              <rect x="280" y="310" width="120" height="76" rx="6"/>
-              <text class="diagram__label" x="340" y="341" text-anchor="middle">Frontend</text>
-              <text class="diagram__sub" x="340" y="364" text-anchor="middle">Astro</text>
-            </g>
-          </svg>
+          <figure class="editor" aria-hidden="true">
+            <div class="editor__bar">
+              <span class="editor__dots"><span></span><span></span><span></span></span>
+              <span>thomas.ts</span>
+            </div>
+            <pre><code><span class="line" style="--n:0"><span class="cmt">// profile</span></span><span class="line" style="--n:1"><span class="kw">const</span> <span class="fn">thomas</span> = {</span><span class="line" style="--n:2">  <span class="type">role</span>: <span class="str">"Solution Architect"</span>,</span><span class="line" style="--n:3">  <span class="type">company</span>: <span class="str">"LEAN-CODERS GmbH"</span>,</span><span class="line" style="--n:4">  <span class="type">city</span>: <span class="str">"Vienna"</span>,</span><span class="line" style="--n:5">  <span class="type">since</span>: <span class="num">2012</span>,</span><span class="line" style="--n:6">  <span class="type">stack</span>: [<span class="str">"Strapi"</span>, <span class="str">"Vendure"</span>, <span class="str">"Astro"</span>],</span><span class="line" style="--n:7">};</span><span class="line" style="--n:8"></span><span class="line" style="--n:9"><span class="kw">export default</span> <span class="fn">thomas</span>;</span></code></pre>
+          </figure>
         </div>
       </div>
     </header>
-    <div class="stripe" aria-hidden="true"></div>
 
     <main>
-      <section class="block" aria-labelledby="focus">
+      <section class="section" aria-labelledby="focus">
         <div class="page">
           <h2 class="section__title" id="focus">What I work on</h2>
-          <div class="focus">
-            <p class="focus__statement">I make the decisions that are expensive to change later.</p>
-            <div class="focus__text">
-              <p>How a system is cut, which technology fits the team, and how content and commerce data flow. I stay close to the code, so the architecture survives contact with the team that builds it.</p>
-              <ul class="tools">
-                <li>Strapi v5</li>
-                <li>Vendure v3</li>
-                <li>Astro</li>
-                <li>Modern CSS</li>
-              </ul>
-            </div>
+          <div class="bento">
+            <article class="tile tile--wide" style="--tile: var(--kw)">
+              <h3>Solution Architecture</h3>
+              <p>I cut systems, choose technology and write down the decisions that are expensive to change later. I stay close to the code, so the architecture survives contact with the team that builds it.</p>
+              <span class="tile__tag">requirements → system design</span>
+            </article>
+            <article class="tile" style="--tile: var(--str)">
+              <h3>Headless CMS</h3>
+              <p>Content models that editors enjoy and developers can extend.</p>
+              <span class="tile__tag">Strapi v5</span>
+            </article>
+            <article class="tile" style="--tile: var(--num)">
+              <h3>E-Commerce</h3>
+              <p>Flexible catalog and checkout logic behind fast storefronts.</p>
+              <span class="tile__tag">Vendure v3</span>
+            </article>
+            <article class="tile tile--wide" style="--tile: var(--fn)">
+              <h3>Frontend</h3>
+              <p>Semantic HTML, plain modern CSS and Astro – fast and accessible by default.</p>
+              <span class="tile__tag">Astro, CSS</span>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="block block--mint" aria-labelledby="career">
+      <section class="section" aria-labelledby="career">
         <div class="page">
           <h2 class="section__title" id="career">Career</h2>
-          <ol class="route">
-            <li class="stop">
-              <span class="waymark" aria-hidden="true"></span>
-              <div class="stop__head">
-                <p class="stop__year">2012</p>
-                <h3 class="stop__place">Vienna</h3>
-                <p class="stop__meta">Mar 2012 – Jul 2015</p>
-              </div>
-              <div>
-                <h4 class="stop__company">Web Developer, diamond:dogs group</h4>
-                <p class="stop__text">Frontend development for agency clients, from first websites to larger web applications.</p>
-              </div>
-            </li>
-            <li class="stop">
-              <span class="waymark" aria-hidden="true"></span>
-              <div class="stop__head">
-                <p class="stop__year">2015</p>
-                <h3 class="stop__place">Graz</h3>
-                <p class="stop__meta">Aug 2015 – Aug 2016</p>
-              </div>
-              <div>
-                <h4 class="stop__company">Web Developer, Styria Digital Services</h4>
-                <p class="stop__text">Frontend development for media and content platforms with a focus on performance and editorial workflows.</p>
-              </div>
-            </li>
-            <li class="stop">
-              <span class="waymark" aria-hidden="true"></span>
-              <div class="stop__head">
-                <p class="stop__year">2016</p>
-                <h3 class="stop__place">Niklasdorf</h3>
-                <p class="stop__meta">Sep 2016 – May 2018</p>
-              </div>
-              <div>
-                <h4 class="stop__company">Software Developer, AURENA Tech</h4>
-                <p class="stop__text">First time working close to a product: shipped features end to end in a product team.</p>
-              </div>
-            </li>
-            <li class="stop">
-              <span class="waymark" aria-hidden="true"></span>
-              <div class="stop__head">
-                <p class="stop__year">2019</p>
-                <h3 class="stop__place">Vienna</h3>
-                <p class="stop__meta">Jan 2019 – today</p>
-              </div>
-              <div>
-                <h4 class="stop__company"><span class="nowrap">LEAN-CODERS GmbH</span></h4>
+          <div class="career">
+            <figure class="heatmap" aria-hidden="true">
+              <ul class="heatmap__grid"><li class="cell" style="--i:0"></li><li class="cell" style="--i:1"></li><li class="cell c-num" style="--i:2" title="Mar 2012: diamond:dogs group"></li><li class="cell c-num" style="--i:3" title="Apr 2012: diamond:dogs group"></li><li class="cell c-num" style="--i:4" title="May 2012: diamond:dogs group"></li><li class="cell c-num" style="--i:5" title="Jun 2012: diamond:dogs group"></li><li class="cell c-num" style="--i:6" title="Jul 2012: diamond:dogs group"></li><li class="cell c-num" style="--i:7" title="Aug 2012: diamond:dogs group"></li><li class="cell c-num" style="--i:8" title="Sep 2012: diamond:dogs group"></li><li class="cell c-num" style="--i:9" title="Oct 2012: diamond:dogs group"></li><li class="cell c-num" style="--i:10" title="Nov 2012: diamond:dogs group"></li><li class="cell c-num" style="--i:11" title="Dec 2012: diamond:dogs group"></li><li class="cell c-num" style="--i:12" title="Jan 2013: diamond:dogs group"></li><li class="cell c-num" style="--i:13" title="Feb 2013: diamond:dogs group"></li><li class="cell c-num" style="--i:14" title="Mar 2013: diamond:dogs group"></li><li class="cell c-num" style="--i:15" title="Apr 2013: diamond:dogs group"></li><li class="cell c-num" style="--i:16" title="May 2013: diamond:dogs group"></li><li class="cell c-num" style="--i:17" title="Jun 2013: diamond:dogs group"></li><li class="cell c-num" style="--i:18" title="Jul 2013: diamond:dogs group"></li><li class="cell c-num" style="--i:19" title="Aug 2013: diamond:dogs group"></li><li class="cell c-num" style="--i:20" title="Sep 2013: diamond:dogs group"></li><li class="cell c-num" style="--i:21" title="Oct 2013: diamond:dogs group"></li><li class="cell c-num" style="--i:22" title="Nov 2013: diamond:dogs group"></li><li class="cell c-num" style="--i:23" title="Dec 2013: diamond:dogs group"></li><li class="cell c-num" style="--i:24" title="Jan 2014: diamond:dogs group"></li><li class="cell c-num" style="--i:25" title="Feb 2014: diamond:dogs group"></li><li class="cell c-num" style="--i:26" title="Mar 2014: diamond:dogs group"></li><li class="cell c-num" style="--i:27" title="Apr 2014: diamond:dogs group"></li><li class="cell c-num" style="--i:28" title="May 2014: diamond:dogs group"></li><li class="cell c-num" style="--i:29" title="Jun 2014: diamond:dogs group"></li><li class="cell c-num" style="--i:30" title="Jul 2014: diamond:dogs group"></li><li class="cell c-num" style="--i:31" title="Aug 2014: diamond:dogs group"></li><li class="cell c-num" style="--i:32" title="Sep 2014: diamond:dogs group"></li><li class="cell c-num" style="--i:33" title="Oct 2014: diamond:dogs group"></li><li class="cell c-num" style="--i:34" title="Nov 2014: diamond:dogs group"></li><li class="cell c-num" style="--i:35" title="Dec 2014: diamond:dogs group"></li><li class="cell c-num" style="--i:36" title="Jan 2015: diamond:dogs group"></li><li class="cell c-num" style="--i:37" title="Feb 2015: diamond:dogs group"></li><li class="cell c-num" style="--i:38" title="Mar 2015: diamond:dogs group"></li><li class="cell c-num" style="--i:39" title="Apr 2015: diamond:dogs group"></li><li class="cell c-num" style="--i:40" title="May 2015: diamond:dogs group"></li><li class="cell c-num" style="--i:41" title="Jun 2015: diamond:dogs group"></li><li class="cell c-num" style="--i:42" title="Jul 2015: diamond:dogs group"></li><li class="cell c-type" style="--i:43" title="Aug 2015: Styria Digital Services"></li><li class="cell c-type" style="--i:44" title="Sep 2015: Styria Digital Services"></li><li class="cell c-type" style="--i:45" title="Oct 2015: Styria Digital Services"></li><li class="cell c-type" style="--i:46" title="Nov 2015: Styria Digital Services"></li><li class="cell c-type" style="--i:47" title="Dec 2015: Styria Digital Services"></li><li class="cell c-type" style="--i:48" title="Jan 2016: Styria Digital Services"></li><li class="cell c-type" style="--i:49" title="Feb 2016: Styria Digital Services"></li><li class="cell c-type" style="--i:50" title="Mar 2016: Styria Digital Services"></li><li class="cell c-type" style="--i:51" title="Apr 2016: Styria Digital Services"></li><li class="cell c-type" style="--i:52" title="May 2016: Styria Digital Services"></li><li class="cell c-type" style="--i:53" title="Jun 2016: Styria Digital Services"></li><li class="cell c-type" style="--i:54" title="Jul 2016: Styria Digital Services"></li><li class="cell c-type" style="--i:55" title="Aug 2016: Styria Digital Services"></li><li class="cell c-str" style="--i:56" title="Sep 2016: AURENA Tech"></li><li class="cell c-str" style="--i:57" title="Oct 2016: AURENA Tech"></li><li class="cell c-str" style="--i:58" title="Nov 2016: AURENA Tech"></li><li class="cell c-str" style="--i:59" title="Dec 2016: AURENA Tech"></li><li class="cell c-str" style="--i:60" title="Jan 2017: AURENA Tech"></li><li class="cell c-str" style="--i:61" title="Feb 2017: AURENA Tech"></li><li class="cell c-str" style="--i:62" title="Mar 2017: AURENA Tech"></li><li class="cell c-str" style="--i:63" title="Apr 2017: AURENA Tech"></li><li class="cell c-str" style="--i:64" title="May 2017: AURENA Tech"></li><li class="cell c-str" style="--i:65" title="Jun 2017: AURENA Tech"></li><li class="cell c-str" style="--i:66" title="Jul 2017: AURENA Tech"></li><li class="cell c-str" style="--i:67" title="Aug 2017: AURENA Tech"></li><li class="cell c-str" style="--i:68" title="Sep 2017: AURENA Tech"></li><li class="cell c-str" style="--i:69" title="Oct 2017: AURENA Tech"></li><li class="cell c-str" style="--i:70" title="Nov 2017: AURENA Tech"></li><li class="cell c-str" style="--i:71" title="Dec 2017: AURENA Tech"></li><li class="cell c-str" style="--i:72" title="Jan 2018: AURENA Tech"></li><li class="cell c-str" style="--i:73" title="Feb 2018: AURENA Tech"></li><li class="cell c-str" style="--i:74" title="Mar 2018: AURENA Tech"></li><li class="cell c-str" style="--i:75" title="Apr 2018: AURENA Tech"></li><li class="cell c-str" style="--i:76" title="May 2018: AURENA Tech"></li><li class="cell" style="--i:77"></li><li class="cell" style="--i:78"></li><li class="cell" style="--i:79"></li><li class="cell" style="--i:80"></li><li class="cell" style="--i:81"></li><li class="cell" style="--i:82"></li><li class="cell" style="--i:83"></li><li class="cell c-fn" style="--i:84" title="Jan 2019: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:85" title="Feb 2019: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:86" title="Mar 2019: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:87" title="Apr 2019: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:88" title="May 2019: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:89" title="Jun 2019: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:90" title="Jul 2019: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:91" title="Aug 2019: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:92" title="Sep 2019: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:93" title="Oct 2019: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:94" title="Nov 2019: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:95" title="Dec 2019: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:96" title="Jan 2020: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:97" title="Feb 2020: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:98" title="Mar 2020: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:99" title="Apr 2020: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:100" title="May 2020: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:101" title="Jun 2020: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:102" title="Jul 2020: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:103" title="Aug 2020: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:104" title="Sep 2020: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:105" title="Oct 2020: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:106" title="Nov 2020: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:107" title="Dec 2020: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:108" title="Jan 2021: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:109" title="Feb 2021: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:110" title="Mar 2021: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:111" title="Apr 2021: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:112" title="May 2021: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:113" title="Jun 2021: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:114" title="Jul 2021: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:115" title="Aug 2021: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:116" title="Sep 2021: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:117" title="Oct 2021: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:118" title="Nov 2021: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:119" title="Dec 2021: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:120" title="Jan 2022: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:121" title="Feb 2022: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:122" title="Mar 2022: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-fn" style="--i:123" title="Apr 2022: LEAN-CODERS GmbH, Senior Software Developer"></li><li class="cell c-const" style="--i:124" title="May 2022: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:125" title="Jun 2022: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:126" title="Jul 2022: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:127" title="Aug 2022: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:128" title="Sep 2022: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:129" title="Oct 2022: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:130" title="Nov 2022: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:131" title="Dec 2022: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:132" title="Jan 2023: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:133" title="Feb 2023: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:134" title="Mar 2023: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:135" title="Apr 2023: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:136" title="May 2023: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:137" title="Jun 2023: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:138" title="Jul 2023: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:139" title="Aug 2023: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:140" title="Sep 2023: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:141" title="Oct 2023: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:142" title="Nov 2023: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:143" title="Dec 2023: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:144" title="Jan 2024: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:145" title="Feb 2024: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:146" title="Mar 2024: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:147" title="Apr 2024: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:148" title="May 2024: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:149" title="Jun 2024: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:150" title="Jul 2024: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:151" title="Aug 2024: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:152" title="Sep 2024: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:153" title="Oct 2024: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:154" title="Nov 2024: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:155" title="Dec 2024: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:156" title="Jan 2025: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:157" title="Feb 2025: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-const" style="--i:158" title="Mar 2025: LEAN-CODERS GmbH, Head of Development"></li><li class="cell c-kw" style="--i:159" title="Apr 2025: LEAN-CODERS GmbH, Solution Architect"></li><li class="cell c-kw" style="--i:160" title="May 2025: LEAN-CODERS GmbH, Solution Architect"></li><li class="cell c-kw" style="--i:161" title="Jun 2025: LEAN-CODERS GmbH, Solution Architect"></li><li class="cell c-kw" style="--i:162" title="Jul 2025: LEAN-CODERS GmbH, Solution Architect"></li><li class="cell c-kw" style="--i:163" title="Aug 2025: LEAN-CODERS GmbH, Solution Architect"></li><li class="cell c-kw" style="--i:164" title="Sep 2025: LEAN-CODERS GmbH, Solution Architect"></li><li class="cell c-kw" style="--i:165" title="Oct 2025: LEAN-CODERS GmbH, Solution Architect"></li><li class="cell c-kw" style="--i:166" title="Nov 2025: LEAN-CODERS GmbH, Solution Architect"></li><li class="cell c-kw" style="--i:167" title="Dec 2025: LEAN-CODERS GmbH, Solution Architect"></li><li class="cell c-kw" style="--i:168" title="Jan 2026: LEAN-CODERS GmbH, Solution Architect"></li><li class="cell c-kw" style="--i:169" title="Feb 2026: LEAN-CODERS GmbH, Solution Architect"></li><li class="cell c-kw" style="--i:170" title="Mar 2026: LEAN-CODERS GmbH, Solution Architect"></li><li class="cell c-kw" style="--i:171" title="Apr 2026: LEAN-CODERS GmbH, Solution Architect"></li><li class="cell c-kw" style="--i:172" title="May 2026: LEAN-CODERS GmbH, Solution Architect"></li><li class="cell c-kw" style="--i:173" title="Jun 2026: LEAN-CODERS GmbH, Solution Architect"></li><li class="cell c-kw" style="--i:174" title="Jul 2026: LEAN-CODERS GmbH, Solution Architect"></li><li class="cell c-kw" style="--i:175" title="Aug 2026: LEAN-CODERS GmbH, Solution Architect"></li><li class="cell c-kw" style="--i:176" title="Sep 2026: LEAN-CODERS GmbH, Solution Architect"></li><li class="cell c-kw" style="--i:177" title="Oct 2026: LEAN-CODERS GmbH, Solution Architect"></li><li class="cell" style="--i:178"></li><li class="cell" style="--i:179"></li></ul>
+              <p class="heatmap__axis"><span>2012</span><span>2026</span></p>
+              <ul class="legend"><li style="--c:var(--num)">diamond:dogs group</li><li style="--c:var(--type)">Styria Digital Services</li><li style="--c:var(--str)">AURENA Tech</li><li style="--c:var(--fn)">Senior Software Developer</li><li style="--c:var(--const)">Head of Development</li><li style="--c:var(--kw)">Solution Architect</li></ul>
+            </figure>
+
+            <ol class="graph">
+              <li class="stop" style="--role: var(--kw)" data-role="kw const fn">
+                <p class="stop__when">Jan 2019 – today · Vienna</p>
+                <h3 class="stop__title"><span class="nowrap">LEAN-CODERS GmbH</span></h3>
                 <ol class="roles">
-                  <li class="role">
-                    <h4>Senior Software Developer</h4>
-                    <p class="stop__meta">Jan 2019 – Apr 2022</p>
-                    <p>Built web applications for clients with React.js and modern CSS and took over technical responsibility for projects.</p>
-                  </li>
-                  <li class="role">
-                    <h4>Head of Development</h4>
-                    <p class="stop__meta">May 2022 – Apr 2025</p>
-                    <p>Led a development team, owned delivery and quality across projects and grew the team's engineering practices.</p>
-                  </li>
-                  <li class="role">
+                  <li class="role" style="--role: var(--kw)" data-role="kw">
                     <h4>Solution Architect</h4>
-                    <p class="stop__meta">Apr 2025 – today</p>
+                    <p class="stop__when">Apr 2025 – today</p>
                     <p>Plan projects from the ground up: requirements, system landscape, technology choices and the roadmap to delivery.</p>
                   </li>
+                  <li class="role" style="--role: var(--const)" data-role="const">
+                    <h4>Head of Development</h4>
+                    <p class="stop__when">May 2022 – Apr 2025</p>
+                    <p>Led a development team, owned delivery and quality across projects and grew the team's engineering practices.</p>
+                  </li>
+                  <li class="role" style="--role: var(--fn)" data-role="fn">
+                    <h4>Senior Software Developer</h4>
+                    <p class="stop__when">Jan 2019 – Apr 2022</p>
+                    <p>Built web applications for clients with React.js and modern CSS and took over technical responsibility for projects.</p>
+                  </li>
                 </ol>
-              </div>
-            </li>
-          </ol>
+              </li>
+              <li class="stop" style="--role: var(--str)" data-role="str">
+                <p class="stop__when">Sep 2016 – May 2018 · Niklasdorf</p>
+                <h3 class="stop__title">AURENA Tech</h3>
+                <p class="stop__text">Software Developer. First time working close to a product: shipped features end to end in a product team.</p>
+              </li>
+              <li class="stop" style="--role: var(--type)" data-role="type">
+                <p class="stop__when">Aug 2015 – Aug 2016 · Graz</p>
+                <h3 class="stop__title">Styria Digital Services</h3>
+                <p class="stop__text">Web Developer. Frontend development for media and content platforms with a focus on performance and editorial workflows.</p>
+              </li>
+              <li class="stop" style="--role: var(--num)" data-role="num">
+                <p class="stop__when">Mar 2012 – Jul 2015 · Vienna</p>
+                <h3 class="stop__title">diamond:dogs group</h3>
+                <p class="stop__text">Web Developer. Frontend development for agency clients, from first websites to larger web applications.</p>
+              </li>
+            </ol>
+          </div>
         </div>
       </section>
 
-      <section class="block" aria-labelledby="projects">
+      <section class="section" aria-labelledby="projects">
         <div class="page">
           <h2 class="section__title" id="projects">Sideprojects</h2>
-          <div class="projects">
-            <details class="project">
-              <summary>
-                <span class="project__name">Demo Project One</span>
-                <span class="project__tech">CSS, HTML</span>
-              </summary>
-              <div class="project__body">
-                <p>A small tool for exploring CSS scroll-driven animations with live previews.</p>
-                <p><a href="https://github.com/hochitom">View the code on GitHub</a></p>
-              </div>
-            </details>
-            <details class="project">
-              <summary>
-                <span class="project__name">Demo Project Two</span>
-                <span class="project__tech">Strapi, Astro</span>
-              </summary>
-              <div class="project__body">
-                <p>Starter template for a Strapi v5 backend with an Astro frontend.</p>
-                <p><a href="https://github.com/hochitom">View the code on GitHub</a></p>
-              </div>
-            </details>
-            <details class="project">
-              <summary>
-                <span class="project__name">Demo Project Three</span>
-                <span class="project__tech">Vendure, TypeScript</span>
-              </summary>
-              <div class="project__body">
-                <p>Experimental Vendure v3 plugin for a lightweight storefront checkout.</p>
-                <p><a href="https://github.com/hochitom">View the code on GitHub</a></p>
-              </div>
-            </details>
+          <div class="repos">
+            <article class="repo" style="--lang: var(--type)">
+              <h3 class="repo__name">demo-project-one</h3>
+              <p>A small tool for exploring CSS scroll-driven animations with live previews.</p>
+              <p class="repo__tech">CSS, HTML</p>
+              <a class="link-code" href="https://github.com/hochitom">View on GitHub</a>
+            </article>
+            <article class="repo" style="--lang: var(--str)">
+              <h3 class="repo__name">demo-project-two</h3>
+              <p>Starter template for a Strapi v5 backend with an Astro frontend.</p>
+              <p class="repo__tech">Strapi, Astro</p>
+              <a class="link-code" href="https://github.com/hochitom">View on GitHub</a>
+            </article>
+            <article class="repo" style="--lang: var(--num)">
+              <h3 class="repo__name">demo-project-three</h3>
+              <p>Experimental Vendure v3 plugin for a lightweight storefront checkout.</p>
+              <p class="repo__tech">Vendure, TypeScript</p>
+              <a class="link-code" href="https://github.com/hochitom">View on GitHub</a>
+            </article>
           </div>
         </div>
       </section>
     </main>
 
-    <div class="stripe" aria-hidden="true"></div>
-    <footer class="block block--dark dark contact" id="contact">
-      <div class="page">
-        <h2 class="section__title">Get in touch</h2>
-        <p class="contact__lead">Planning a system and need an architect to shape it? Write me a few lines about it.</p>
-        <a class="contact__mail" href="mailto:hochitom@me.com">hochitom@me.com</a>
-        <p class="contact__links">
-          <a href="https://github.com/hochitom">GitHub</a>
-          <a href="https://www.linkedin.com/">LinkedIn</a>
-        </p>
-        <p class="legal">© Thomas Hochörtler, Solution Architect at <span class="nowrap">LEAN-CODERS GmbH</span></p>
+    <footer>
+      <div class="contact section" id="contact">
+        <div class="page">
+          <h2 class="section__title">Get in touch</h2>
+          <p class="contact__lead">Planning a system and need an architect to shape it? Write me a few lines about it.</p>
+          <a class="contact__mail" href="mailto:hochitom@me.com">hochitom@me.com</a>
+          <p class="contact__links">
+            <a href="https://github.com/hochitom">GitHub</a>
+            <a href="https://www.linkedin.com/">LinkedIn</a>
+          </p>
+        </div>
       </div>
+      <p class="statusbar"><span>© Thomas Hochörtler</span><span>Solution Architect at <span class="nowrap">LEAN-CODERS GmbH</span></span></p>
     </footer>
   </body>
 </html>
