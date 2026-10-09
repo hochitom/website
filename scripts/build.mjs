@@ -1,6 +1,6 @@
 import { createHash } from 'node:crypto';
 import { cp, mkdir, readFile, rm, writeFile, access } from 'node:fs/promises';
-import { transform, bundle, browserslistToTargets } from 'lightningcss';
+import { transform, transformStyleAttribute, bundle, browserslistToTargets } from 'lightningcss';
 import { minify } from 'html-minifier-terser';
 
 const src = new URL('../src/', import.meta.url);
@@ -35,7 +35,10 @@ html = await minify(html, {
   removeRedundantAttributes: true,
   removeOptionalTags: false,
   removeAttributeQuotes: false,
-  minifyCSS: (css) => transform({ filename: 'inline.css', code: Buffer.from(css), minify: true, targets }).code.toString(),
+  minifyCSS: (css, type) =>
+    type === 'inline'
+      ? transformStyleAttribute({ code: Buffer.from(css), minify: true, targets }).code.toString()
+      : transform({ filename: 'inline.css', code: Buffer.from(css), minify: true, targets }).code.toString(),
   minifyJS: true,
   sortAttributes: true,
   sortClassName: true,

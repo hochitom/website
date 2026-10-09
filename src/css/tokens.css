@@ -1,26 +1,28 @@
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 
-  /* Gletscher, Fichte, Moos, Wegzeichen-Rot */
-  --color-bg: light-dark(#edf1f0, #1b2523);
-  --color-text: light-dark(#183a33, #e4ebe8);
-  --color-muted: light-dark(#4f6d62, #9db3aa);
-  --color-trail: light-dark(#b9c8c2, #3a4b46);
-  --color-mark: light-dark(#c8202f, #ef5a67);
+  /* Fichte, Gletscher, Moos, Wegzeichen-Rot */
+  --fichte: #0e2823;
+  --fichte-2: #17403a;
+  --gletscher: #f2f5f4;
+  --mint: #d9e8e2;
+  --moos: #4b6a61;
+  --pfad: #b7cbc4;
+  --rot: #d6232f;
+  --rot-hell: #ff7a80;
 
-  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
-  --font-body: 'Literata', Georgia, serif;
+  --font: 'Archivo', system-ui, sans-serif;
 
   --text-base: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
   --text-s: 0.9375rem;
   --text-l: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
-  --text-xl: clamp(2rem, 1.4rem + 3vw, 3.5rem);
-  --text-name: clamp(3.25rem, 1rem + 11vw, 9.5rem);
+  --text-xl: clamp(2.25rem, 1.2rem + 4.5vw, 4.75rem);
+  --text-name: clamp(2.75rem, 0.6rem + 9.2vw, 6.5rem);
 
   --space-s: 0.75rem;
   --space-m: 1.5rem;
-  --space-l: clamp(3rem, 8vw, 6.5rem);
+  --space-l: clamp(4rem, 9vw, 8rem);
   --gutter: clamp(1.25rem, 5vw, 4rem);
-  --measure: 38rem;
-  --page-width: 72rem;
+  --measure: 36rem;
+  --page-width: 76rem;
 }

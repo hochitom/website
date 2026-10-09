@@ -1,15 +1,9 @@
 @font-face {
-  font-family: 'Bricolage Grotesque';
-  font-weight: 200 800;
+  font-family: 'Archivo';
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
   font-display: swap;
-  src: url('/assets/fonts/bricolage-grotesque-latin-wght-normal.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Literata';
-  font-weight: 200 900;
-  font-display: swap;
-  src: url('/assets/fonts/literata-latin-wght-normal.woff2') format('woff2');
+  src: url('/assets/fonts/archivo-latin-wdth-normal.woff2') format('woff2');
 }
 
 html { scroll-behavior: smooth; }
@@ -19,27 +13,30 @@ html { scroll-behavior: smooth; }
 }
 
 body {
-  background: var(--color-bg);
-  color: var(--color-text);
-  font: var(--text-base) / 1.7 var(--font-body);
+  background: var(--gletscher);
+  color: var(--fichte);
+  font: 400 var(--text-base) / 1.65 var(--font);
+  font-stretch: 100%;
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-display);
-  line-height: 1.1;
+  font-weight: 800;
+  font-stretch: 118%;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   text-wrap: balance;
 }
 
 p { text-wrap: pretty; }
 
 a {
-  text-decoration-thickness: 0.08em;
-  text-underline-offset: 0.2em;
+  text-decoration-thickness: 0.09em;
+  text-underline-offset: 0.22em;
 }
-
-a:hover { color: var(--color-mark); }
 
 :focus-visible {
-  outline: 3px solid var(--color-mark);
+  outline: 3px solid var(--rot);
   outline-offset: 3px;
 }
+
+.dark :focus-visible { outline-color: var(--rot-hell); }

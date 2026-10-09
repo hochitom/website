@@ -4,18 +4,18 @@
   padding-inline: var(--gutter);
 }
 
-.section { padding-block: var(--space-l); }
+/* Vollflaechige Farbbloecke, Inhalt sitzt im .page */
+.block { padding-block: var(--space-l); }
+.block--dark { background: var(--fichte); color: var(--gletscher); }
+.block--mint { background: var(--mint); }
 
 .section__title {
   font-size: var(--text-xl);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-block-end: calc(var(--space-m) * 1.75);
+  margin-block-end: calc(var(--space-m) * 2);
 }
 
-.hero {
-  min-height: 92svh;
-  display: grid;
-  align-content: end;
-  padding-block: var(--space-l);
+/* Rot-weiss-rot: Wegzeichen als Trennband */
+.stripe {
+  height: 1.5rem;
+  background: linear-gradient(to bottom, var(--rot) 0 33.3%, #fff 33.3% 66.6%, var(--rot) 66.6% 100%);
 }
