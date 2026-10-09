@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { cp, mkdir, readFile, rm, writeFile, access } from 'node:fs/promises';
 import { transform, transformStyleAttribute, bundle, browserslistToTargets } from 'lightningcss';
 import { minify } from 'html-minifier-terser';
+import { build } from 'esbuild';
 
 const src = new URL('../src/', import.meta.url);
 const dist = new URL('../dist/', import.meta.url);
@@ -26,9 +27,22 @@ try {
   await cp(new URL('assets/', src), new URL('assets/', dist), { recursive: true });
 } catch {}
 
+// JS: bundle and minify, add content hash
+const js = await build({
+  entryPoints: [new URL('js/main.js', src).pathname],
+  bundle: true,
+  minify: true,
+  format: 'esm',
+  target: 'es2022',
+  write: false,
+});
+const jsCode = js.outputFiles[0].contents;
+const jsName = `main.${createHash('sha256').update(jsCode).digest('hex').slice(0, 8)}.js`;
+await writeFile(new URL(`assets/${jsName}`, dist), jsCode);
+
 // HTML: point to hashed CSS, minify markup
 let html = await readFile(new URL('index.html', src), 'utf8');
-html = html.replace('/css/main.css', `/assets/${cssName}`);
+html = html.replace('/css/main.css', `/assets/${cssName}`).replace('/js/main.js', `/assets/${jsName}`);
 html = await minify(html, {
   collapseWhitespace: true,
   removeComments: true,
@@ -51,4 +65,4 @@ try {
   await cp(new URL('static/', src), dist, { recursive: true });
 } catch {}
 
-console.log(`Build fertig: dist/index.html, dist/assets/${cssName}`);
+console.log(`Build fertig: dist/index.html, dist/assets/${cssName}, dist/assets/${jsName}`);

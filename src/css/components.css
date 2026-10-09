@@ -175,18 +175,71 @@
   font: 500 0.8rem var(--font-code);
 }
 
-.legend { display: grid; gap: 0.35rem; margin-block-start: var(--space-m); font-size: var(--text-s); }
-.legend li { display: flex; align-items: center; gap: 0.6rem; }
-.legend li::before { content: ''; width: 0.8rem; aspect-ratio: 1; border-radius: 3px; background: var(--c); }
+.legend { display: grid; gap: 0.15rem; margin-block-start: var(--space-s); font-size: var(--text-s); }
 
-/* Hover auf einer Station hebt ihre Monate im Raster hervor */
-.career:has([data-role]:hover) .cell { opacity: 0.2; }
-.career:has([data-role~='num']:hover) .c-num,
-.career:has([data-role~='type']:hover) .c-type,
-.career:has([data-role~='str']:hover) .c-str,
-.career:has([data-role~='fn']:hover) .c-fn,
-.career:has([data-role~='const']:hover) .c-const,
-.career:has([data-role~='kw']:hover) .c-kw { opacity: 1; }
+.legend__item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+
+.legend__item::before {
+  content: '';
+  flex: none;
+  width: 0.8rem;
+  aspect-ratio: 1;
+  border-radius: 3px;
+  background: var(--c);
+}
+
+.legend__item:hover { background: var(--surface-2); }
+.legend__item[aria-pressed='true'] { border-color: var(--c); background: var(--surface); font-weight: 700; }
+
+.cell[data-role] { cursor: pointer; }
+
+.heatmap__readout {
+  min-height: 1.6em;
+  margin-block-start: var(--space-s);
+  color: var(--text);
+  font: 500 0.85rem / 1.6 var(--font-code);
+}
+
+/* Hover/Fokus auf Station, Monat oder Legende hebt die Monate der Rolle hervor */
+.career:has([data-role]:is(:hover, :focus-visible)) .cell { opacity: 0.2; }
+.career:has([data-role~='num']:is(:hover, :focus-visible)) .c-num,
+.career:has([data-role~='type']:is(:hover, :focus-visible)) .c-type,
+.career:has([data-role~='str']:is(:hover, :focus-visible)) .c-str,
+.career:has([data-role~='fn']:is(:hover, :focus-visible)) .c-fn,
+.career:has([data-role~='const']:is(:hover, :focus-visible)) .c-const,
+.career:has([data-role~='kw']:is(:hover, :focus-visible)) .c-kw { opacity: 1; }
+
+/* Gewaehlte Rolle bleibt hervorgehoben */
+.career[data-selected] .cell { opacity: 0.2; }
+.career[data-selected='num'] .c-num,
+.career[data-selected='type'] .c-type,
+.career[data-selected='str'] .c-str,
+.career[data-selected='fn'] .c-fn,
+.career[data-selected='const'] .c-const,
+.career[data-selected='kw'] .c-kw { opacity: 1; }
+
+.role[data-active] {
+  background: var(--surface-2);
+  box-shadow: 0 0 0 2px var(--role), 0 0 2rem -0.5rem var(--role);
+}
+
+.stop[data-active] > .stop__title { text-decoration: underline 3px; text-underline-offset: 0.3em; }
+.stop[data-active]::before { background: var(--role); }
+
+.role, .stop__title { scroll-margin-block: 4rem; }
 
 /* Werdegang: Waypoints als Commit-Graph (neueste zuerst) */
 .graph {
@@ -222,7 +275,7 @@
   );
 }
 
-.stop { position: relative; padding-inline-start: 2.75rem; }
+.stop { --dot: var(--role); position: relative; padding-inline-start: 2.75rem; }
 
 .stop::before {
   content: '';
