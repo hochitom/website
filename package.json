@@ -15,7 +15,7 @@
   "author": "hochitom@me.com",
   "license": "ISC",
   "engines": {
-    "node": ">=20"
+    "node": ">=24"
   },
   "devDependencies": {
     "html-minifier-terser": "^7.2.0",
