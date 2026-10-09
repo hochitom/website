@@ -163,8 +163,6 @@
 .c-num { background: var(--num); }
 .c-type { background: var(--type); }
 .c-str { background: var(--str); }
-.c-fn { background: var(--fn); }
-.c-const { background: var(--const); }
 .c-kw { background: var(--kw); }
 
 .heatmap__axis {
@@ -218,8 +216,6 @@
 .career:has([data-role~='num']:is(:hover, :focus-visible)) .c-num,
 .career:has([data-role~='type']:is(:hover, :focus-visible)) .c-type,
 .career:has([data-role~='str']:is(:hover, :focus-visible)) .c-str,
-.career:has([data-role~='fn']:is(:hover, :focus-visible)) .c-fn,
-.career:has([data-role~='const']:is(:hover, :focus-visible)) .c-const,
 .career:has([data-role~='kw']:is(:hover, :focus-visible)) .c-kw { opacity: 1; }
 
 /* Gewaehlte Rolle bleibt hervorgehoben */
@@ -227,11 +223,8 @@
 .career[data-selected='num'] .c-num,
 .career[data-selected='type'] .c-type,
 .career[data-selected='str'] .c-str,
-.career[data-selected='fn'] .c-fn,
-.career[data-selected='const'] .c-const,
 .career[data-selected='kw'] .c-kw { opacity: 1; }
 
-.role[data-active] { background: var(--surface); }
 .stop[data-active]::before { background: var(--role); }
 
 .role, .stop__title { scroll-margin-block: 4rem; }
@@ -258,14 +251,12 @@
 
 .graph::before {
   z-index: 1;
-  transform-origin: top;
   background: linear-gradient(
     to bottom,
     var(--kw) 0%,
-    var(--const) 12%,
-    var(--fn) 24%,
-    var(--str) 50%,
-    var(--type) 72%,
+    var(--kw) 38%,
+    var(--str) 55%,
+    var(--type) 75%,
     var(--num) 95%
   );
 }
@@ -385,7 +376,7 @@
       animation-range: entry calc(var(--i, 0) * 0.3%) entry calc(25% + var(--i, 0) * 0.3%);
     }
 
-    @keyframes draw { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+    @keyframes draw { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0); } }
     @keyframes reach { from { --dot: var(--line); } to { --dot: var(--role); } }
     @keyframes cell-on { from { opacity: 0; scale: 0.4; } }
   }
