@@ -5,83 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Thomas Hochörtler – Solution Architect</title>
     <meta name="description" content="Thomas Hochörtler is a Solution Architect at LEAN-CODERS GmbH in Vienna, Austria.">
+    <link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/literata-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
-    <main>
-      <header class="section hero">
+    <main class="page">
+      <header class="hero">
         <div>
-          <p class="hero__role">Solution Architect · LEAN-CODERS GmbH</p>
-          <h1 class="hero__title">Thomas Hochörtler</h1>
-          <p class="hero__lead">I turn complex requirements into clear, scalable architectures – from the first workshop to production. Based in Vienna, Austria.</p>
-          <p><a class="button" href="#career">See my career</a> <a class="button button--ghost" href="#contact">Get in touch</a></p>
+          <h1 class="hero__name">Thomas Hochörtler</h1>
+          <p class="hero__role">Solution Architect at <span class="nowrap">LEAN-CODERS GmbH</span></p>
+          <p class="hero__lead">I design software solutions in Vienna, from the first requirements workshop to a system that teams can build, run and change.</p>
+          <p class="hero__links">
+            <a href="#career">Read my career</a>
+            <a href="#contact">Get in touch</a>
+          </p>
         </div>
       </header>
 
       <section class="section" aria-labelledby="focus">
-        <h2 class="section__title" id="focus">Focus</h2>
-        <ul class="focus">
-          <li class="focus__item reveal">
-            <h3>Solution Architecture</h3>
-            <p>Translating business goals into robust, maintainable system designs and technology decisions.</p>
-          </li>
-          <li class="focus__item reveal">
-            <h3>Headless CMS</h3>
-            <p>Content platforms with Strapi v5 that editors enjoy and developers can extend.</p>
-          </li>
-          <li class="focus__item reveal">
-            <h3>E-Commerce</h3>
-            <p>Flexible commerce backends with Vendure v3 and fast, accessible storefronts.</p>
-          </li>
-          <li class="focus__item reveal">
-            <h3>Frontend Craft</h3>
-            <p>Modern CSS, Astro and semantic HTML – performance and accessibility by default.</p>
-          </li>
-        </ul>
+        <h2 class="section__title" id="focus">What I work on</h2>
+        <p class="focus">I make the decisions that are expensive to change later: how a system is cut, which technology fits the team, and how content and commerce data flow. My go-to tools are Strapi v5 for content, Vendure v3 for commerce and Astro with plain CSS for fast, accessible frontends.</p>
       </section>
 
       <section class="section" aria-labelledby="career">
         <h2 class="section__title" id="career">Career</h2>
-        <ol class="waypoints">
-          <li class="waypoint reveal">
-            <p class="waypoint__time">Jan 2019 – Present</p>
-            <h3 class="waypoint__role">LEAN-CODERS GmbH</h3>
-            <p class="waypoint__company">Vienna, Hybrid</p>
-            <ol class="roles">
-              <li class="role">
-                <p class="waypoint__time">Apr 2025 – Present</p>
-                <h4>Solution Architect</h4>
-                <p>Planning and designing projects from the ground up: requirements, system landscape, technology choices and the roadmap to delivery.</p>
-              </li>
-              <li class="role">
-                <p class="waypoint__time">May 2022 – Apr 2025</p>
-                <h4>Head of Development</h4>
-                <p>Led a development team, owned delivery and quality across projects and grew the team's engineering practices.</p>
-              </li>
-              <li class="role">
-                <p class="waypoint__time">Jan 2019 – Apr 2022</p>
-                <h4>Senior Software Developer</h4>
-                <p>Built web applications for clients with React.js and modern CSS, took over technical responsibility for projects.</p>
-              </li>
-            </ol>
+        <ol class="route">
+          <li class="stop">
+            <span class="waymark" aria-hidden="true"></span>
+            <div class="stop__head">
+              <h3 class="stop__place">Vienna</h3>
+              <p class="stop__meta">Mar 2012 – Jul 2015</p>
+            </div>
+            <div>
+              <h4>Web Developer, diamond:dogs group</h4>
+              <p class="stop__text">Frontend development for agency clients, from first websites to larger web applications.</p>
+            </div>
           </li>
-          <li class="waypoint reveal">
-            <p class="waypoint__time">Sep 2016 – May 2018</p>
-            <h3 class="waypoint__role">Software Developer</h3>
-            <p class="waypoint__company">AURENA Tech · Niklasdorf</p>
-            <p>First time working close to a product: shipped features end to end in a product team.</p>
+          <li class="stop">
+            <span class="waymark" aria-hidden="true"></span>
+            <div class="stop__head">
+              <h3 class="stop__place">Graz</h3>
+              <p class="stop__meta">Aug 2015 – Aug 2016</p>
+            </div>
+            <div>
+              <h4>Web Developer, Styria Digital Services</h4>
+              <p class="stop__text">Frontend development for media and content platforms with a focus on performance and editorial workflows.</p>
+            </div>
           </li>
-          <li class="waypoint reveal">
-            <p class="waypoint__time">Aug 2015 – Aug 2016</p>
-            <h3 class="waypoint__role">Web Developer</h3>
-            <p class="waypoint__company">Styria Digital Services · Graz</p>
-            <p>Frontend development for media and content platforms with a focus on performance and editorial workflows.</p>
+          <li class="stop">
+            <span class="waymark" aria-hidden="true"></span>
+            <div class="stop__head">
+              <h3 class="stop__place">Niklasdorf</h3>
+              <p class="stop__meta">Sep 2016 – May 2018</p>
+            </div>
+            <div>
+              <h4>Software Developer, AURENA Tech</h4>
+              <p class="stop__text">First time working close to a product: shipped features end to end in a product team.</p>
+            </div>
           </li>
-          <li class="waypoint reveal">
-            <p class="waypoint__time">Mar 2012 – Jul 2015</p>
-            <h3 class="waypoint__role">Web Developer</h3>
-            <p class="waypoint__company">diamond:dogs group · Vienna</p>
-            <p>Frontend development for agency clients, from first websites to larger web applications.</p>
+          <li class="stop">
+            <span class="waymark" aria-hidden="true"></span>
+            <div class="stop__head">
+              <h3 class="stop__place">Vienna</h3>
+              <p class="stop__meta">Jan 2019 – today</p>
+            </div>
+            <div>
+              <h4><span class="nowrap">LEAN-CODERS GmbH</span></h4>
+              <ol class="roles">
+                <li class="role">
+                  <h4>Senior Software Developer</h4>
+                  <p class="stop__meta">Jan 2019 – Apr 2022</p>
+                  <p>Built web applications for clients with React.js and modern CSS and took over technical responsibility for projects.</p>
+                </li>
+                <li class="role">
+                  <h4>Head of Development</h4>
+                  <p class="stop__meta">May 2022 – Apr 2025</p>
+                  <p>Led a development team, owned delivery and quality across projects and grew the team's engineering practices.</p>
+                </li>
+                <li class="role">
+                  <h4>Solution Architect</h4>
+                  <p class="stop__meta">Apr 2025 – today</p>
+                  <p>Plan projects from the ground up: requirements, system landscape, technology choices and the roadmap to delivery.</p>
+                </li>
+              </ol>
+            </div>
           </li>
         </ol>
       </section>
@@ -89,39 +97,49 @@
       <section class="section" aria-labelledby="projects">
         <h2 class="section__title" id="projects">Sideprojects</h2>
         <div class="projects">
-          <article class="project reveal">
-            <h3>Demo Project One</h3>
-            <p>A small tool for exploring CSS scroll-driven animations with live previews.</p>
-            <ul class="tags"><li>CSS</li><li>HTML</li></ul>
-            <a href="https://github.com/hochitom">View on GitHub</a>
-          </article>
-          <article class="project reveal">
-            <h3>Demo Project Two</h3>
-            <p>Starter template for a Strapi v5 backend with an Astro frontend.</p>
-            <ul class="tags"><li>Strapi</li><li>Astro</li></ul>
-            <a href="https://github.com/hochitom">View on GitHub</a>
-          </article>
-          <article class="project reveal">
-            <h3>Demo Project Three</h3>
-            <p>Experimental Vendure v3 plugin for a lightweight storefront checkout.</p>
-            <ul class="tags"><li>Vendure</li><li>TypeScript</li></ul>
-            <a href="https://github.com/hochitom">View on GitHub</a>
-          </article>
+          <details class="project">
+            <summary>
+              <span class="project__name">Demo Project One</span>
+              <span class="project__tech">CSS, HTML</span>
+            </summary>
+            <div class="project__body">
+              <p>A small tool for exploring CSS scroll-driven animations with live previews.</p>
+              <p><a href="https://github.com/hochitom">View the code on GitHub</a></p>
+            </div>
+          </details>
+          <details class="project">
+            <summary>
+              <span class="project__name">Demo Project Two</span>
+              <span class="project__tech">Strapi, Astro</span>
+            </summary>
+            <div class="project__body">
+              <p>Starter template for a Strapi v5 backend with an Astro frontend.</p>
+              <p><a href="https://github.com/hochitom">View the code on GitHub</a></p>
+            </div>
+          </details>
+          <details class="project">
+            <summary>
+              <span class="project__name">Demo Project Three</span>
+              <span class="project__tech">Vendure, TypeScript</span>
+            </summary>
+            <div class="project__body">
+              <p>Experimental Vendure v3 plugin for a lightweight storefront checkout.</p>
+              <p><a href="https://github.com/hochitom">View the code on GitHub</a></p>
+            </div>
+          </details>
         </div>
       </section>
     </main>
 
-    <footer class="section" id="contact">
-      <div>
-        <h2 class="section__title">Get in touch</h2>
-        <p>Looking for a Solution Architect? Let's talk.</p>
-        <ul class="links">
-          <li><a href="mailto:hochitom@me.com">hochitom@me.com</a></li>
-          <li><a href="https://github.com/hochitom">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
-        </ul>
-        <p class="legal">© Thomas Hochörtler · Solution Architect at LEAN-CODERS GmbH</p>
-      </div>
+    <footer class="page section" id="contact">
+      <h2 class="section__title">Get in touch</h2>
+      <p class="contact__lead">Planning a system and need an architect to shape it? Write me a few lines about it.</p>
+      <p class="contact__links">
+        <a href="mailto:hochitom@me.com">hochitom@me.com</a>
+        <a href="https://github.com/hochitom">GitHub</a>
+        <a href="https://www.linkedin.com/">LinkedIn</a>
+      </p>
+      <p class="legal">© Thomas Hochörtler, Solution Architect at LEAN-CODERS GmbH</p>
     </footer>
   </body>
 </html>

@@ -4,7 +4,7 @@ import { extname } from 'node:path';
 import { bundle } from 'lightningcss';
 
 const src = new URL('../src/', import.meta.url);
-const types = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.png': 'image/png', '.ico': 'image/x-icon' };
+const types = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.png': 'image/png', '.ico': 'image/x-icon', '.woff2': 'font/woff2' };
 
 createServer(async (req, res) => {
   const path = new URL(req.url, 'http://x').pathname;

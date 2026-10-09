@@ -1,20 +1,26 @@
-/* Platzhalter: Farben und Typografie werden im Design-Schritt festgelegt */
 :root {
   color-scheme: light dark;
 
-  --color-bg: light-dark(oklch(98% 0 0), oklch(18% 0.01 260));
-  --color-text: light-dark(oklch(22% 0.01 260), oklch(94% 0.005 260));
-  --color-muted: color-mix(in oklch, var(--color-text) 60%, transparent);
-  --color-accent: oklch(68% 0.18 150);
-  --color-line: color-mix(in oklch, var(--color-text) 18%, transparent);
+  /* Gletscher, Fichte, Moos, Wegzeichen-Rot */
+  --color-bg: light-dark(#edf1f0, #1b2523);
+  --color-text: light-dark(#183a33, #e4ebe8);
+  --color-muted: light-dark(#4f6d62, #9db3aa);
+  --color-trail: light-dark(#b9c8c2, #3a4b46);
+  --color-mark: light-dark(#c8202f, #ef5a67);
 
-  --font-body: system-ui, sans-serif;
-  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-  --text-xl: clamp(1.75rem, 1.2rem + 2.5vw, 3rem);
-  --text-hero: clamp(2.5rem, 1.5rem + 5vw, 5.5rem);
+  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-body: 'Literata', Georgia, serif;
+
+  --text-base: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
+  --text-s: 0.9375rem;
+  --text-l: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --text-xl: clamp(2rem, 1.4rem + 3vw, 3.5rem);
+  --text-name: clamp(3.25rem, 1rem + 11vw, 9.5rem);
 
   --space-s: 0.75rem;
   --space-m: 1.5rem;
-  --space-l: clamp(3rem, 8vw, 7rem);
-  --content-width: 68rem;
+  --space-l: clamp(3rem, 8vw, 6.5rem);
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+  --measure: 38rem;
+  --page-width: 72rem;
 }

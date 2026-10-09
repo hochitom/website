@@ -21,6 +21,11 @@ const cssHash = createHash('sha256').update(code).digest('hex').slice(0, 8);
 const cssName = `main.${cssHash}.css`;
 await writeFile(new URL(`assets/${cssName}`, dist), code);
 
+// Assets (Fonts etc.)
+try {
+  await cp(new URL('assets/', src), new URL('assets/', dist), { recursive: true });
+} catch {}
+
 // HTML: point to hashed CSS, minify markup
 let html = await readFile(new URL('index.html', src), 'utf8');
 html = html.replace('/css/main.css', `/assets/${cssName}`);

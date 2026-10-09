@@ -1,20 +1,21 @@
-.section {
-  padding-block: var(--space-l);
-  padding-inline: var(--space-m);
+.page {
+  max-width: var(--page-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
 }
 
-.section > * {
-  max-width: var(--content-width);
-  margin-inline: auto;
-}
+.section { padding-block: var(--space-l); }
 
 .section__title {
   font-size: var(--text-xl);
-  margin-bottom: var(--space-m);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-block-end: calc(var(--space-m) * 1.75);
 }
 
 .hero {
-  min-height: 100svh;
+  min-height: 92svh;
   display: grid;
-  align-content: center;
+  align-content: end;
+  padding-block: var(--space-l);
 }

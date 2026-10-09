@@ -1,13 +1,45 @@
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-weight: 200 800;
+  font-display: swap;
+  src: url('/assets/fonts/bricolage-grotesque-latin-wght-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Literata';
+  font-weight: 200 900;
+  font-display: swap;
+  src: url('/assets/fonts/literata-latin-wght-normal.woff2') format('woff2');
+}
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
 body {
   background: var(--color-bg);
   color: var(--color-text);
-  font: var(--text-base) / 1.6 var(--font-body);
+  font: var(--text-base) / 1.7 var(--font-body);
 }
 
-h1, h2, h3 { line-height: 1.15; text-wrap: balance; }
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
 p { text-wrap: pretty; }
 
+a {
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+a:hover { color: var(--color-mark); }
+
 :focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 3px solid var(--color-mark);
   outline-offset: 3px;
 }
