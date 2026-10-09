@@ -231,7 +231,7 @@
 .career[data-selected='const'] .c-const,
 .career[data-selected='kw'] .c-kw { opacity: 1; }
 
-.role[data-active] { border-inline-start-color: var(--role); background: var(--surface); }
+.role[data-active] { background: var(--surface); }
 .stop[data-active]::before { background: var(--role); }
 
 .role, .stop__title { scroll-margin-block: 4rem; }
@@ -292,9 +292,9 @@
 .roles { display: grid; gap: var(--space-s); margin-block-start: var(--space-m); max-width: 38rem; }
 
 .role {
-  padding: 0.25rem 0 0.25rem var(--space-m);
-  border-inline-start: 2px solid color-mix(in oklch, var(--role) 55%, transparent);
-  border-radius: 2px;
+  padding: 0.5rem var(--space-s);
+  margin-inline: calc(var(--space-s) * -1);
+  border-radius: var(--radius);
 }
 
 .role h4 { font-size: 1.05rem; }
