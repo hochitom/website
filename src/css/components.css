@@ -207,7 +207,7 @@
 .cell[data-role] { cursor: pointer; }
 
 .heatmap__readout {
-  min-height: 1.6em;
+  min-height: 3.2em;
   margin-block-start: var(--space-s);
   color: var(--text);
   font: 500 0.85rem / 1.6 var(--font-code);
@@ -231,12 +231,7 @@
 .career[data-selected='const'] .c-const,
 .career[data-selected='kw'] .c-kw { opacity: 1; }
 
-.role[data-active] {
-  background: var(--surface-2);
-  box-shadow: 0 0 0 2px var(--role), 0 0 2rem -0.5rem var(--role);
-}
-
-.stop[data-active] > .stop__title { text-decoration: underline 3px; text-underline-offset: 0.3em; }
+.role[data-active] { border-inline-start-color: var(--role); background: var(--surface); }
 .stop[data-active]::before { background: var(--role); }
 
 .role, .stop__title { scroll-margin-block: 4rem; }
@@ -291,20 +286,18 @@
 }
 
 .stop__when { color: var(--comment); font: 500 var(--text-s) var(--font-code); }
-.stop__title { font-size: var(--text-l); margin-block: 0.25rem 0.5rem; color: var(--role); }
+.stop__title { font-size: var(--text-l); margin-block: 0.25rem 0.5rem; }
 .stop__text { max-width: var(--measure); }
 
 .roles { display: grid; gap: var(--space-s); margin-block-start: var(--space-m); max-width: 38rem; }
 
 .role {
-  padding: var(--space-s) var(--space-m);
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-inline-start: 4px solid var(--role);
-  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 0.25rem 0 0.25rem var(--space-m);
+  border-inline-start: 2px solid color-mix(in oklch, var(--role) 55%, transparent);
+  border-radius: 2px;
 }
 
-.role h4 { font-size: 1.05rem; color: var(--role); }
+.role h4 { font-size: 1.05rem; }
 .role .stop__when { margin-block: 0.1rem 0.35rem; }
 
 /* Sideprojects: Repository-Kacheln */

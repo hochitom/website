@@ -28,13 +28,13 @@ if (career) {
 
     for (const el of career.querySelectorAll('[data-active]')) delete el.dataset.active;
 
+    show(idle());
+
     if (selected) {
       const target = document.getElementById(`role-${selected}`);
       target.dataset.active = '';
       target.scrollIntoView({ behavior: reduceMotion.matches ? 'auto' : 'smooth', block: 'center' });
     }
-
-    show(idle());
   }
 
   grid.addEventListener('mouseover', (event) => {
