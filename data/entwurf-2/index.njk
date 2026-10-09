@@ -1,0 +1,92 @@
+---
+title: Thomas Hochörtler – Frontend Developer (Entwurf 2)
+description: Thomas Hochörtler, Frontend Developer aus Österreich.
+layout: base.njk
+stylesheet: entwurf-2.css
+fonts: https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;800&display=swap
+permalink: /entwurf-2/
+bodyClass: crt
+---
+<div class="screen">
+  <div class="titlebar">
+    <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span>hochitom@lean-coders: ~ — zsh</span>
+    <span class="clock" aria-hidden="true">ONLINE</span>
+  </div>
+
+  <nav class="tabs" aria-label="Hauptnavigation">
+    <a href="#whoami">whoami</a>
+    <a href="#ls-leistungen">ls leistungen/</a>
+    <a href="#git-log">git log projekte</a>
+    <a href="#cat-stack">cat stack.txt</a>
+    <a href="#mail">./kontakt.sh</a>
+  </nav>
+
+  <main class="term">
+    <section id="whoami">
+      <p class="cmd">whoami</p>
+      <pre class="ascii" aria-label="Thomas Hochörtler">
+╔╦╗╦ ╦╔═╗╔╦╗╔═╗╔═╗
+ ║ ╠═╣║ ║║║║╠═╣╚═╗
+ ╩ ╩ ╩╚═╝╩ ╩╩ ╩╚═╝</pre>
+      <h1>{{ site.name }}<span class="cursor" aria-hidden="true"></span></h1>
+      <p class="role">&gt; {{ site.role }} · {{ site.location }} · {{ site.company }}</p>
+      <p class="out">{{ site.claim }}</p>
+      <p class="out dim">{{ site.intro }}</p>
+      <p class="status"><span class="led" aria-hidden="true"></span> Status: offen für neue Projekte</p>
+    </section>
+
+    <section id="ls-leistungen">
+      <p class="cmd">ls -la leistungen/</p>
+      <ul class="files">
+        {% for s in site.services %}
+        <li>
+          <span class="perm" aria-hidden="true">drwxr-xr-x</span>
+          <span class="name">{{ s.title | lower | replace(" & ", "-und-") | replace(" ", "-") }}/</span>
+          <span class="desc"># {{ s.text }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section id="git-log">
+      <p class="cmd">git log --oneline projekte</p>
+      <ul class="log">
+        {% for p in site.projects %}
+        <li>
+          <span class="hash" aria-hidden="true">{{ ["a3f9c1e", "7b2d04a", "e91c5f8"][loop.index0] }}</span>
+          <div>
+            <h2>{{ p.title }} <span class="tag">[{{ p.tag }}]</span></h2>
+            <p>{{ p.text }}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section id="cat-stack">
+      <p class="cmd">cat stack.txt</p>
+      <ul class="stack">
+        {% for t in site.stack %}
+        <li><span class="bar" style="--w: {{ [95, 100, 85, 80, 75, 70][loop.index0] }}%"></span><span>{{ t }}</span></li>
+        {% endfor %}
+      </ul>
+      <dl class="facts">
+        {% for f in site.facts %}<div><dt>{{ f.value }}</dt><dd>{{ f.label }}</dd></div>{% endfor %}
+      </dl>
+    </section>
+
+    <section id="mail">
+      <p class="cmd">./kontakt.sh --nachricht "Hallo!"</p>
+      <p class="out">Antwort innerhalb von 24h. Garantiert menschlich.</p>
+      <a class="send" href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </section>
+
+    <p class="cmd prompt-end"><span class="cursor" aria-hidden="true"></span></p>
+  </main>
+
+  <footer class="statusline">
+    <span>© 2026 {{ site.name }} · {{ site.company }}</span>
+    <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a></span>
+  </footer>
+</div>

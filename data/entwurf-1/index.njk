@@ -1,0 +1,87 @@
+---
+title: Thomas Hochörtler – Frontend Developer (Entwurf 1)
+description: Thomas Hochörtler, Frontend Developer aus Österreich.
+layout: base.njk
+stylesheet: entwurf-1.css
+fonts: https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap
+permalink: /entwurf-1/
+---
+<header class="bar">
+  <a class="logo" href="#top">TH.</a>
+  <nav aria-label="Hauptnavigation">
+    <a href="#leistungen">Leistungen</a>
+    <a href="#projekte">Projekte</a>
+    <a href="#ueber-mich">Über mich</a>
+    <a class="pill" href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <p class="kicker">{{ site.role }} · {{ site.location }}</p>
+    <h1>
+      <span>Web</span>
+      <span class="outline">sites</span>
+      <span>die <em>sitzen.</em></span>
+    </h1>
+    <p class="claim">{{ site.claim }}</p>
+    <a class="cta" href="#kontakt">Projekt starten <span aria-hidden="true">→</span></a>
+    <div class="sticker" aria-hidden="true">Verfügbar<br>für neue<br>Projekte</div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      {% for i in [1,2] %}{% for s in site.stack %}<span>{{ s }}</span><span class="star">✱</span>{% endfor %}{% endfor %}
+    </div>
+  </div>
+
+  <section id="leistungen" class="block">
+    <h2><span class="num">01</span> Leistungen</h2>
+    <ul class="services">
+      {% for s in site.services %}
+      <li>
+        <span class="idx">{{ loop.index }}</span>
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.text }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section id="projekte" class="block inverse">
+    <h2><span class="num">02</span> Projekte</h2>
+    <ul class="projects">
+      {% for p in site.projects %}
+      <li>
+        <a href="#kontakt">
+          <span class="tag">{{ p.tag }}</span>
+          <h3>{{ p.title }}</h3>
+          <p>{{ p.text }}</p>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section id="ueber-mich" class="block about">
+    <h2><span class="num">03</span> Über mich</h2>
+    <p class="lead">{{ site.intro }}</p>
+    <dl class="facts">
+      {% for f in site.facts %}
+      <div><dt>{{ f.value }}</dt><dd>{{ f.label }}</dd></div>
+      {% endfor %}
+    </dl>
+  </section>
+
+  <section id="kontakt" class="contact">
+    <p class="kicker">Du hast eine Idee?</p>
+    <a class="mail" href="mailto:{{ site.email }}">Sag<br>Hallo.</a>
+    <p>{{ site.email }}</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>© 2026 {{ site.name }} · {{ site.company }}</span>
+  <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a></span>
+</footer>

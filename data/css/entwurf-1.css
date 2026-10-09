@@ -1,0 +1,87 @@
+:root {
+  --ink: #0b0b0b;
+  --paper: #f3f0e6;
+  --acid: #d4ff00;
+  --hot: #ff4d2e;
+  --display: 'Archivo Black', 'Arial Black', sans-serif;
+  --mono: 'Space Mono', ui-monospace, monospace;
+  --gutter: clamp(1rem, 4vw, 3rem);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--mono); font-size: 1rem; line-height: 1.55; }
+a { color: inherit; }
+ul, dl { list-style: none; margin: 0; padding: 0; }
+h1, h2, h3, p, dd { margin: 0; }
+
+.bar { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: .9rem var(--gutter); background: var(--paper); border-bottom: 3px solid var(--ink); }
+.logo { font: 1.6rem/1 var(--display); text-decoration: none; }
+.bar nav { display: flex; gap: 1.25rem; align-items: center; font-weight: 700; font-size: .9rem; text-transform: uppercase; }
+.bar nav a { text-decoration: none; }
+.bar nav a:not(.pill):hover { background: var(--acid); }
+.pill { border: 3px solid var(--ink); padding: .3rem .9rem; border-radius: 99px; box-shadow: 4px 4px 0 var(--ink); transition: transform .15s, box-shadow .15s; }
+.pill:hover { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--ink); background: var(--acid); }
+
+.hero { position: relative; padding: clamp(2rem, 6vw, 5rem) var(--gutter) 3rem; overflow: hidden; }
+.kicker { font-weight: 700; text-transform: uppercase; letter-spacing: .12em; font-size: .85rem; }
+.hero h1 { font: clamp(4.5rem, 18vw, 17rem)/.82 var(--display); text-transform: uppercase; letter-spacing: -.04em; margin: 1rem 0 2rem; }
+.hero h1 span { display: block; }
+.outline { color: transparent; -webkit-text-stroke: .02em var(--ink); }
+.hero em { font-style: normal; background: var(--acid); padding: 0 .08em; box-shadow: .04em .04em 0 var(--ink); }
+.claim { max-width: 34rem; font-size: clamp(1rem, 1.6vw, 1.3rem); }
+.cta { display: inline-flex; gap: .75rem; margin-top: 2rem; padding: 1rem 1.6rem; background: var(--ink); color: var(--paper); font: 1.1rem var(--display); text-transform: uppercase; text-decoration: none; transition: background .2s, color .2s, transform .2s; }
+.cta:hover { background: var(--acid); color: var(--ink); transform: rotate(-2deg) scale(1.03); }
+.sticker { position: absolute; right: var(--gutter); bottom: 2.5rem; display: grid; place-items: center; width: 9.5rem; aspect-ratio: 1; background: var(--hot); color: #fff; border: 3px solid var(--ink); border-radius: 50%; font: .95rem/1.2 var(--display); text-align: center; text-transform: uppercase; transform: rotate(12deg); animation: wobble 4s ease-in-out infinite; }
+@keyframes wobble { 50% { transform: rotate(-8deg) scale(1.05); } }
+
+.marquee { overflow: hidden; background: var(--ink); color: var(--acid); border-block: 3px solid var(--ink); transform: rotate(-1.2deg) scale(1.03); }
+.track { display: flex; width: max-content; gap: 2rem; padding: .8rem 0; font: 1.6rem var(--display); text-transform: uppercase; white-space: nowrap; animation: scroll 25s linear infinite; }
+.track .star { color: var(--hot); }
+@keyframes scroll { to { transform: translateX(-50%); } }
+
+.block { padding: clamp(3rem, 8vw, 7rem) var(--gutter); }
+.block h2 { font: clamp(2.5rem, 8vw, 6rem)/1 var(--display); text-transform: uppercase; margin-bottom: 3rem; }
+.num { font: 1rem var(--mono); vertical-align: top; margin-right: .5rem; padding: .1rem .5rem; border: 2px solid currentColor; border-radius: 99px; }
+
+.services { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); border: 3px solid var(--ink); }
+.services li { position: relative; padding: 2rem 1.5rem 2.5rem; border: 1.5px solid var(--ink); transition: background .2s; }
+.services li:hover { background: var(--acid); }
+.idx { display: block; font: 3rem/1 var(--display); margin-bottom: 1.5rem; }
+.services h3 { font: 1.4rem/1.1 var(--display); text-transform: uppercase; margin-bottom: .75rem; }
+
+.inverse { background: var(--ink); color: var(--paper); }
+.projects { display: grid; gap: 1px; }
+.projects a { position: relative; display: grid; grid-template-columns: 12rem 1fr; gap: .25rem 2rem; align-items: baseline; padding: 2rem 0; border-top: 2px solid var(--paper); text-decoration: none; transition: padding-left .25s, color .25s; }
+.projects li:last-child a { border-bottom: 2px solid var(--paper); }
+.projects a:hover { padding-left: 1.5rem; color: var(--acid); }
+.tag { grid-row: span 2; font-size: .8rem; text-transform: uppercase; opacity: .7; }
+.projects h3 { font: clamp(1.8rem, 5vw, 3.5rem)/1 var(--display); text-transform: uppercase; }
+.projects p { max-width: 40rem; opacity: .8; }
+.arrow { position: absolute; right: 0; top: 2rem; font: 2.5rem/1 var(--display); }
+
+.about .lead { max-width: 52rem; font: clamp(1.4rem, 3vw, 2.4rem)/1.25 var(--display); margin-bottom: 3rem; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 1.5rem; }
+.facts div { padding: 1.5rem; border: 3px solid var(--ink); box-shadow: 8px 8px 0 var(--ink); background: #fff; }
+.facts div:nth-child(2) { background: var(--acid); }
+.facts div:nth-child(3) { background: var(--hot); color: #fff; }
+.facts dt { font: 4rem/1 var(--display); }
+
+.contact { padding: 5rem var(--gutter); background: var(--acid); text-align: center; border-top: 3px solid var(--ink); }
+.mail { display: block; margin: 1rem 0; font: clamp(5rem, 20vw, 18rem)/.85 var(--display); text-transform: uppercase; text-decoration: none; letter-spacing: -.04em; transition: letter-spacing .3s, color .3s; }
+.mail:hover { letter-spacing: .02em; color: var(--hot); }
+.contact p:last-child { font-weight: 700; }
+
+.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; padding: 1.25rem var(--gutter); background: var(--ink); color: var(--paper); font-size: .8rem; }
+
+@media (max-width: 40rem) {
+  .bar nav a:not(.pill) { display: none; }
+  .sticker { position: static; margin-top: 2rem; width: 7.5rem; }
+  .projects a { grid-template-columns: 1fr; }
+  .tag { grid-row: auto; }
+  .arrow { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .track, .sticker { animation: none; }
+}

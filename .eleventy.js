@@ -1,5 +1,6 @@
 module.exports = function (eleventyConfig) {
-  // Return your Object options:
+  eleventyConfig.addPassthroughCopy('data/css');
+
   return {
     dir: {
       input: 'data',

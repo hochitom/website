@@ -1,0 +1,27 @@
+{
+  "name": "Thomas Hochörtler",
+  "role": "Frontend Developer",
+  "location": "Österreich",
+  "company": "LEAN-CODERS GmbH",
+  "email": "hochitom@me.com",
+  "claim": "Ich baue schnelle, barrierefreie Websites und Web-Apps, die man gerne benutzt.",
+  "intro": "Frontend Developer aus Österreich. Ich entwickle bei der LEAN-CODERS GmbH Websites, Design Systems und Shops – mit Astro, Vanilla CSS und viel Liebe zum Detail.",
+  "services": [
+    { "title": "Websites & Web-Apps", "text": "Schnelle, saubere Frontends mit Astro und modernem Vanilla CSS – ohne unnötigen Ballast." },
+    { "title": "Design Systems", "text": "Wiederverwendbare Komponenten und Design Tokens, die Teams schneller und konsistenter machen." },
+    { "title": "Headless CMS", "text": "Redaktionelle Inhalte mit Strapi v5: flexibel modelliert, sauber angebunden." },
+    { "title": "E-Commerce", "text": "Shop-Frontends auf Basis von Vendure v3 – von Produktseite bis Checkout." },
+    { "title": "Performance & A11y", "text": "Core Web Vitals, Barrierefreiheit und SEO als feste Bestandteile, nicht als Nachtrag." }
+  ],
+  "projects": [
+    { "title": "Projekt Alpha", "tag": "Website · Astro", "text": "Platzhalter: Relaunch eines Unternehmensauftritts mit Fokus auf Performance." },
+    { "title": "Projekt Beta", "tag": "Shop · Vendure v3", "text": "Platzhalter: Headless-Shop mit individuellem Checkout." },
+    { "title": "Projekt Gamma", "tag": "CMS · Strapi v5", "text": "Platzhalter: Redaktionssystem für mehrsprachige Inhalte." }
+  ],
+  "stack": ["Astro", "Vanilla CSS", "TypeScript", "Strapi v5", "Vendure v3", "Eleventy"],
+  "facts": [
+    { "value": "100", "label": "Lighthouse-Score als Ziel" },
+    { "value": "0", "label": "Utility-Klassen im Markup" },
+    { "value": "AT", "label": "Remote aus Österreich" }
+  ]
+}

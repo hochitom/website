@@ -1,0 +1,85 @@
+---
+title: Thomas Hochörtler – Frontend Developer (Entwurf 3)
+description: Thomas Hochörtler, Frontend Developer aus Österreich.
+layout: base.njk
+stylesheet: entwurf-3.css
+fonts: https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&display=swap
+permalink: /entwurf-3/
+bodyClass: aurora
+---
+<div class="blobs" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<header class="top">
+  <a class="brand" href="#top">Th<em>.</em></a>
+  <nav class="glass" aria-label="Hauptnavigation">
+    <a href="#leistungen">Leistungen</a>
+    <a href="#projekte">Projekte</a>
+    <a href="#ueber-mich">Über mich</a>
+    <a class="solid" href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <p class="chip glass"><span class="led" aria-hidden="true"></span> Offen für neue Projekte</p>
+    <h1>Frontends mit <em>Haltung</em> &amp; Gefühl für Details.</h1>
+    <p class="lead">{{ site.intro }}</p>
+    <div class="actions">
+      <a class="btn solid" href="#projekte">Projekte ansehen</a>
+      <a class="btn glass" href="#kontakt">Kontakt aufnehmen</a>
+    </div>
+  </section>
+
+  <section id="leistungen" class="section">
+    <header class="head"><p class="eyebrow">Leistungen</p><h2>Was ich für dich tun kann</h2></header>
+    <div class="bento">
+      {% for s in site.services %}
+      <article class="card glass c{{ loop.index }}">
+        <span class="glyph" aria-hidden="true">{{ ["◐", "◇", "✦", "◎", "⚡"][loop.index0] }}</span>
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.text }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="projekte" class="section">
+    <header class="head"><p class="eyebrow">Ausgewählte Arbeiten</p><h2>Projekte</h2></header>
+    <div class="work">
+      {% for p in site.projects %}
+      <a class="project glass p{{ loop.index }}" href="#kontakt">
+        <span class="cover" aria-hidden="true"></span>
+        <span class="meta">{{ p.tag }}</span>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.text }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="ueber-mich" class="section about">
+    <div class="portrait glass" role="img" aria-label="Platzhalter für Porträtfoto"><span>TH</span></div>
+    <div>
+      <p class="eyebrow">Über mich</p>
+      <h2>{{ site.name }}</h2>
+      <p class="lead">{{ site.intro }}</p>
+      <ul class="stack">{% for t in site.stack %}<li class="glass">{{ t }}</li>{% endfor %}</ul>
+      <dl class="facts">
+        {% for f in site.facts %}<div><dt>{{ f.value }}</dt><dd>{{ f.label }}</dd></div>{% endfor %}
+      </dl>
+    </div>
+  </section>
+
+  <section id="kontakt" class="section">
+    <div class="cta glass">
+      <h2>Lass uns etwas <em>Gutes</em> bauen.</h2>
+      <p>Schreib mir kurz, worum es geht – ich melde mich innerhalb von 24 Stunden.</p>
+      <a class="btn solid" href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>© 2026 {{ site.name }} · {{ site.company }}</span>
+  <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a></span>
+</footer>
