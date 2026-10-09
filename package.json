@@ -1,10 +1,12 @@
 {
   "name": "hochoertler.dev",
   "version": "1.0.0",
-  "description": "my personal website",
-  "main": "index.js",
+  "description": "Personal website of Thomas Hochörtler, Solution Architect at LEAN-CODERS GmbH",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/dev.mjs"
   },
   "repository": {
     "type": "git",
@@ -12,11 +14,11 @@
   },
   "author": "hochitom@me.com",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hochitom/website/issues"
+  "engines": {
+    "node": ">=20"
   },
-  "homepage": "https://github.com/hochitom/website#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "html-minifier-terser": "^7.2.0",
+    "lightningcss": "^1.27.0"
   }
 }

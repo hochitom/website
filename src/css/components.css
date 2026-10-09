@@ -1,0 +1,67 @@
+.hero__title { font-size: var(--text-hero); }
+.hero__role { color: var(--color-accent); font-weight: 600; }
+
+/* Waypoints: Werdegang */
+.waypoints {
+  position: relative;
+  display: grid;
+  gap: var(--space-l);
+  padding-inline-start: 2rem;
+  container-type: inline-size;
+}
+
+.waypoints::before {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0.4rem;
+  width: 2px;
+  background: var(--color-line);
+}
+
+.waypoint { position: relative; }
+
+.waypoint::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: calc(-2rem + 0.4rem - 0.45rem + 1px);
+  inset-block-start: 0.5rem;
+  width: 0.9rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 2px solid var(--color-accent);
+}
+
+.waypoint__time { color: var(--color-muted); font-size: 0.9em; }
+.waypoint__role { font-size: 1.35rem; }
+.waypoint__company { color: var(--color-accent); font-weight: 600; }
+
+/* Sideprojects */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--space-m);
+}
+
+.project {
+  border: 1px solid var(--color-line);
+  border-radius: 0.75rem;
+  padding: var(--space-m);
+}
+
+/* Scroll-driven Animationen (Fallback: statisch ohne Support) */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+    }
+
+    @keyframes reveal {
+      from { opacity: 0; translate: 0 2rem; }
+      to { opacity: 1; translate: 0 0; }
+    }
+  }
+}

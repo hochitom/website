@@ -1,0 +1,20 @@
+/* Platzhalter: Farben und Typografie werden im Design-Schritt festgelegt */
+:root {
+  color-scheme: light dark;
+
+  --color-bg: light-dark(oklch(98% 0 0), oklch(18% 0.01 260));
+  --color-text: light-dark(oklch(22% 0.01 260), oklch(94% 0.005 260));
+  --color-muted: color-mix(in oklch, var(--color-text) 60%, transparent);
+  --color-accent: oklch(68% 0.18 150);
+  --color-line: color-mix(in oklch, var(--color-text) 18%, transparent);
+
+  --font-body: system-ui, sans-serif;
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-xl: clamp(1.75rem, 1.2rem + 2.5vw, 3rem);
+  --text-hero: clamp(2.5rem, 1.5rem + 5vw, 5.5rem);
+
+  --space-s: 0.75rem;
+  --space-m: 1.5rem;
+  --space-l: clamp(3rem, 8vw, 7rem);
+  --content-width: 68rem;
+}
