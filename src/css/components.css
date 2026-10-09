@@ -105,3 +105,14 @@
 
 .links { display: flex; flex-wrap: wrap; gap: var(--space-m); margin-block: var(--space-m); }
 .legal { color: var(--color-muted); font-size: 0.85rem; }
+
+/* Mehrere Rollen innerhalb einer Station */
+.roles {
+  display: grid;
+  gap: var(--space-m);
+  margin-block-start: var(--space-s);
+  padding-inline-start: var(--space-m);
+  border-inline-start: 2px solid var(--color-line);
+}
+
+.role h4 { font-size: 1.1rem; }
